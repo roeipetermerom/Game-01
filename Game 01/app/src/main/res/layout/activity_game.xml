@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".GameActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        android:alpha="0.7"
+         />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttoms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:src="@drawable/arrow"
+            android:scaleX="-1"
+            android:contentDescription="Right Arrow"
+            android:layout_margin="8dp"
+            />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="0dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_right"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:src="@drawable/arrow"
+            android:contentDescription="Left Arrow"
+            android:layout_margin="8dp"
+             />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- hearts -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/first_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_heart1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/ic_heart"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_heart2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_heart"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_heart3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_heart"/>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- cops -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/cops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_lay"
+        android:layout_above="@+id/buttoms"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- New Icon Below the Hearts -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- New Icon Below the Hearts -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- New Icon Below the Hearts -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- New Icon Below the Hearts -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- New Icon Below the Hearts -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- New Icon Below the Hearts -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/obstacle_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/obstacle" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- New Icon Below the Hearts -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/avi_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/img_ars" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/avi_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/img_ars" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/avi_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/img_ars" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/club_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="8dp"
+        android:scaleY="-1"
+        android:layout_alignBottom="@id/cops"
+        android:layout_marginLeft="280dp"
+        android:layout_marginBottom="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/club" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/club_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="8dp"
+        android:scaleY="-1"
+        android:layout_alignBottom="@id/cops"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/club" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/club_3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="8dp"
+        android:scaleY="-1"
+        android:layout_alignBottom="@id/cops"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/club" />
+
+
+
+
+</RelativeLayout>
